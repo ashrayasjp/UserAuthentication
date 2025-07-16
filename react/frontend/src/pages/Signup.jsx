@@ -1,6 +1,8 @@
 import {useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Home from './Home.jsx'
+import Login from './Login.jsx'
 function Signup() {
     const navigate = useNavigate()
     const handleSignup = async(e) =>{
@@ -24,7 +26,8 @@ else if (password!==confirmpassword){
 else {
 try {
   const response = await axios.post('http://localhost:8080/api/users/signup', {
-    username , password})
+    username , password},
+    { withCredentials: true } )
    
     if (response.status === 200) {
       alert("Signup successful!")
@@ -53,12 +56,14 @@ try {
          <br/><br/>
            <button type  =  "submit">Submit</button>
         </form>
+        <br/>
+        Already  have an Account ?
+        
+     <Link to = "/Login">Login</Link>
     
       </div>
     )
 
-
- 
   }
   
   export default Signup

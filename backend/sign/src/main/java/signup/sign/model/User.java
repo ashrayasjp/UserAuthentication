@@ -1,9 +1,5 @@
 package signup.sign.model;
 
-import java.lang.annotation.Inherited;
-
-import javax.annotation.processing.Generated;
-
 import jakarta.persistence.*;
 
 @Entity
