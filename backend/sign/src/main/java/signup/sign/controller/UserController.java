@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import signup.sign.model.User;
 import signup.sign.repository.UserRepository;
-import org.springframework.web.bind.annotation.GetMapping;
+
 import jakarta.servlet.http.HttpSession;
 
 @RestController
